@@ -20,7 +20,9 @@
         <a class="active" href="calculator.html">Puan Hesaplama</a>
         <a href="contact.html">İletişim</a>
       </div>
-      <div class="logo-placeholder">Logo Alanı</div>
+      <div class="logo-placeholder">
+        <img src="logo.png" alt="Dogu Consulting Logo" />
+      </div>
     </nav>
   </header>
 
@@ -34,7 +36,16 @@
 
     <section class="section calculator">
       <form class="card calculator-form" id="score-form">
-        <div>
+        <div class="step-indicator">
+          <span id="step-text">Adım 1 / 5</span>
+          <span class="step-dot active"></span>
+          <span class="step-dot"></span>
+          <span class="step-dot"></span>
+          <span class="step-dot"></span>
+          <span class="step-dot"></span>
+        </div>
+
+        <div class="step-panel active" data-step="1">
           <label for="education">Eğitim Seviyesi</label>
           <select id="education" name="education">
             <option value="15">Lise (15)</option>
@@ -43,9 +54,12 @@
             <option value="30">Yüksek Lisans (30)</option>
             <option value="35">Doktora (35)</option>
           </select>
+          <div class="step-actions">
+            <button class="primary-btn" type="button" data-next>Sonraki</button>
+          </div>
         </div>
 
-        <div>
+        <div class="step-panel" data-step="2">
           <label for="experience">Mesleki Deneyim</label>
           <select id="experience" name="experience">
             <option value="10">0-2 yıl (10)</option>
@@ -53,9 +67,13 @@
             <option value="24">6-8 yıl (24)</option>
             <option value="30">9+ yıl (30)</option>
           </select>
+          <div class="step-actions">
+            <button class="secondary-btn" type="button" data-prev>Önceki</button>
+            <button class="primary-btn" type="button" data-next>Sonraki</button>
+          </div>
         </div>
 
-        <div>
+        <div class="step-panel" data-step="3">
           <label for="language">Dil Seviyesi</label>
           <select id="language" name="language">
             <option value="10">A2 (10)</option>
@@ -64,9 +82,13 @@
             <option value="28">C1 (28)</option>
             <option value="32">C2 (32)</option>
           </select>
+          <div class="step-actions">
+            <button class="secondary-btn" type="button" data-prev>Önceki</button>
+            <button class="primary-btn" type="button" data-next>Sonraki</button>
+          </div>
         </div>
 
-        <div>
+        <div class="step-panel" data-step="4">
           <label for="age">Yaş</label>
           <input type="range" id="age" name="age" min="18" max="45" value="28" />
           <div class="range-display">
@@ -74,9 +96,13 @@
             <span id="age-value">28</span>
             <span>45</span>
           </div>
+          <div class="step-actions">
+            <button class="secondary-btn" type="button" data-prev>Önceki</button>
+            <button class="primary-btn" type="button" data-next>Sonraki</button>
+          </div>
         </div>
 
-        <div>
+        <div class="step-panel" data-step="5">
           <label for="certificate">Sertifika & Proje Skoru</label>
           <select id="certificate" name="certificate">
             <option value="0">Yok (0)</option>
@@ -84,12 +110,14 @@
             <option value="10" selected>3+ Sertifika (10)</option>
             <option value="15">Uluslararası Proje (15)</option>
           </select>
+          <div class="step-actions">
+            <button class="secondary-btn" type="button" data-prev>Önceki</button>
+            <button class="primary-btn" type="submit">Skoru Göster</button>
+          </div>
         </div>
-
-        <button class="primary-btn" type="submit">Skoru Hesapla</button>
       </form>
 
-      <div class="score-card">
+      <div class="score-card hidden" id="score-card">
         <p class="muted">Toplam Puan</p>
         <div class="score-value" id="score-value">87</div>
         <p class="score-pill" id="score-label">Güçlü Profil</p>
