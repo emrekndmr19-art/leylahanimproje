@@ -9,17 +9,17 @@ const scoreCopy = [
   {
     min: 0,
     label: "Başlangıç",
-    text: "Profilinizi tamamlamak için dil veya sertifika adımlarına odaklanabilirsiniz.",
+    text: "Profilinizi tamamlamak için eğitim veya dil adımlarına odaklanabilirsiniz.",
   },
   {
     min: 60,
     label: "Gelişen Profil",
-    text: "Puanınız iyi seviyede. Deneyim veya eğitim güncellemesi ile daha güçlü hale gelebilir.",
+    text: "Puanınız iyi seviyede. Deneyim güncellemesi ile daha güçlü hale gelebilir.",
   },
   {
     min: 80,
     label: "Güçlü Profil",
-    text: "Profiliniz hedeflenen başvurular için güçlü görünüyor. Ek belgelerle puanınızı daha da yükseltebilirsiniz.",
+    text: "Profiliniz güçlü görünüyor. Dogu Consulting ile stratejik bir yol haritası oluşturabilirsiniz.",
   },
   {
     min: 95,
